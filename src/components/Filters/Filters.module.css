@@ -1,0 +1,7 @@
+.filters {
+  flex: 1 0 auto;
+
+  @media (min-width: 768px) {
+    max-width: var(--space-10xl);
+  }
+}
