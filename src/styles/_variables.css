@@ -1,0 +1,67 @@
+:root {
+  --primary-color: #ff4500;
+  --secondary-color: #0079d3;
+  --black-color: #000000;
+  --gray-900-color: #1b2426;
+  --gray-800-color: #353e40;
+  --gray-700-color: #50585a;
+  --gray-600-color: #6b7274;
+  --gray-500-color: #868d8e;
+  --gray-400-color: #a1a7a8;
+  --gray-300-color: #bcc1c2;
+  --gray-200-color: #d7dbdc;
+  --gray-100-color: #f2f6f7;
+  --white-color: #ffffff;
+
+  --background-color: var(--gray-900-color);
+  --text-darker-color: var(--gray-500-color);
+  --text-lighter-color: var(--white-color);
+
+  --border-color: var(--gray-700-color);
+  --input-background-color: var(--gray-800-color);
+  --input-focus-border-color: var(--secondary-color);
+  --input-text-color: var(--gray-300-color);
+  --input-placeholder-color: var(--gray-700-color);
+
+  --font-size-base: 16px;
+  --line-height-base: 1.5;
+
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.5rem;
+  --font-size-2xl: 2rem;
+  --font-size-3xl: 2.5rem;
+  --font-size-4xl: 3rem;
+  --font-size-5xl: 3.5rem;
+
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 2.5rem;
+  --space-3xl: 3rem;
+  --space-4xl: 3.5rem;
+  --space-5xl: 4rem;
+  --space-6xl: 4.5rem;
+  --space-7xl: 5rem;
+  --space-8xl: 5.5rem;
+  --space-9xl: 6rem;
+  --space-10xl: 6.5rem;
+
+  --border-radius-base: 0.25rem;
+
+  --transition-base: 0.3s ease-in-out;
+
+  --post-background-color: var(--gray-900-color);
+  --post-background-hover-color: var(--gray-800-color);
+  --post-title-color: var(--text-lighter-color);
+  --post-comments-indicator-color: var(--text-darker-color);
+
+  --post-details-background-color: var(--gray-900-color);
+  --post-details-title-color: var(--text-lighter-color);
+  --post-details-text-color: var(--text-darker-color);
+  --post-details-comment-text-color: var(--text-lighter-color);
+}

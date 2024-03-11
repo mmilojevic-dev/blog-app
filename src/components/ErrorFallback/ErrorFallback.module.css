@@ -1,0 +1,22 @@
+/* ErrorFallback.module.css */
+.errorFallback {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &.errorTitle {
+    color: var(--text-lighter-color);
+  }
+
+  &.errorMessage {
+    color: var(--text-darker-color);
+    font-weight: bold;
+  }
+
+  &.refreshButton {
+    margin-top: var(--space-md);
+  }
+}
