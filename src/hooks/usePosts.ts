@@ -1,31 +1,35 @@
-import React from 'react'
+import React, { useCallback } from 'react'
 
 import { CommentType, PostType, UserType } from '@/models'
+import { enhancePostData } from '@/utils'
 
-import { useData } from './useData'
 import { useDebounce } from './useDebounce'
 
-export const usePosts = (searchTerm: string) => {
-  const { data: users } = useData<UserType[]>('/users')
-  const { data: posts, isLoading } = useData<PostType[]>('/posts')
-  const { data: comments } = useData<CommentType[]>('/comments')
+export const usePosts = (
+  searchTerm: string,
+  users: UserType[],
+  posts: PostType[],
+  comments: CommentType[]
+) => {
   const debouncedSearchTerm = useDebounce<string>(searchTerm, 500)
 
-  const filteredPosts = React.useMemo(() => {
-    return posts
-      ?.map((post) => ({
-        ...post,
-        userName:
-          users?.find((user) => user.id === post.userId)?.name ||
-          'Unknown User',
-        commentsNumber: comments?.filter(
-          (comment) => comment.postId === post.id
-        )?.length
-      }))
-      .filter((post) =>
-        post.userName.toLowerCase().includes(debouncedSearchTerm.toLowerCase())
-      )
-  }, [users, posts, comments, debouncedSearchTerm])
+  const filterPostsByUserName = useCallback(
+    (posts: PostType[]) =>
+      posts?.filter((post) =>
+        post?.userName
+          ?.toLowerCase()
+          .includes(debouncedSearchTerm.toLowerCase())
+      ),
+    [debouncedSearchTerm]
+  )
 
-  return { filteredPosts, isLoading }
+  const filteredPosts = React.useMemo(
+    () =>
+      filterPostsByUserName(
+        posts?.map((post) => enhancePostData(post, users, comments))
+      ),
+    [posts, users, comments, filterPostsByUserName]
+  )
+
+  return { filteredPosts }
 }

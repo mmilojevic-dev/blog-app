@@ -4,7 +4,7 @@ import { getData } from '@/api/getData'
 import { getErrorMessage } from '@/utils'
 
 interface UseData<T> {
-  data: T | undefined
+  data: T
   isLoading: boolean
 }
 
@@ -16,6 +16,7 @@ export const useData = <T>(url: string): UseData<T> => {
     setIsLoading(true)
     try {
       const response = await getData<T>(url)
+
       setData(response)
     } catch (error) {
       setIsLoading(false)
@@ -29,5 +30,5 @@ export const useData = <T>(url: string): UseData<T> => {
     fetchData()
   }, [fetchData])
 
-  return { data, isLoading }
+  return { data: data as T, isLoading }
 }

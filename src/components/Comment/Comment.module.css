@@ -1,0 +1,13 @@
+.comment {
+  backdrop-filter: brightness(1.2);
+
+  & .email {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+
+    span {
+      margin-bottom: 0.2rem;
+    }
+  }
+}

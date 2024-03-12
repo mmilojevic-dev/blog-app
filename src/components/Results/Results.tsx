@@ -1,4 +1,5 @@
-import { ItemsLayout } from '../ItemsLayout'
+import { ItemsLayout } from '@/components'
+
 import styles from './Results.module.css'
 
 type ItemType<T> = {

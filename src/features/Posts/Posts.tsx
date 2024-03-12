@@ -9,13 +9,17 @@ import {
   Post,
   Results
 } from '@/components'
+import { useData } from '@/hooks/useData'
 import { usePosts } from '@/hooks/usePosts'
 import { useSearch } from '@/hooks/useSearch'
-import { PostType } from '@/models'
+import { CommentType, PostType, UserType } from '@/models'
 
 export const Posts: React.FC = () => {
   const { searchTerm, handleSearchChange } = useSearch()
-  const { filteredPosts, isLoading } = usePosts(searchTerm)
+  const { data: users } = useData<UserType[]>('/users')
+  const { data: posts } = useData<PostType[]>('/posts')
+  const { data: comments } = useData<CommentType[]>('/comments')
+  const { filteredPosts } = usePosts(searchTerm, users, posts, comments)
 
   React.useEffect(() => {
     console.log(filteredPosts)
@@ -32,10 +36,7 @@ export const Posts: React.FC = () => {
         <Counter count={filteredPosts?.length} />
         <Results<PostType>
           data={filteredPosts}
-          isLoading={isLoading}
-          renderItem={({ item, isLoading }) => (
-            <Post isLoading={isLoading} post={item} key={item?.id} />
-          )}
+          renderItem={({ item }) => <Post key={item?.id} post={item} />}
         />
       </Content>
     </Layout>
