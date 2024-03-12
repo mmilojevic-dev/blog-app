@@ -1,38 +1,18 @@
 import React from 'react'
 
-import { getEntities } from '@/api/getEntities'
-import { getErrorMessage } from '@/utils'
-
-interface UseSearch<T> {
-  isLoading: boolean
-  data: T[]
-  total: number
+interface UseSearch {
+  searchTerm: string
+  handleSearchChange: (e: React.ChangeEvent<HTMLInputElement>) => void
 }
 
-const useSearch = <T>(entity: string): UseSearch<T> => {
-  const [data, setData] = React.useState<T[]>([])
-  const [isLoading, setIsLoading] = React.useState<boolean>(false)
-  const [total, setTotal] = React.useState<number>(0)
+export const useSearch = (): UseSearch => {
+  const [searchTerm, setSearchTerm] = React.useState('')
 
-  const fetchData = React.useCallback(async () => {
-    try {
-      const result = await getEntities<T>(entity)
+  const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchTerm(e.target.value.toLowerCase())
+  }
 
-      setData(result)
-
-      setTotal(result.length)
-    } catch (error) {
-      console.error(getErrorMessage(error))
-    } finally {
-      setIsLoading(false)
-    }
-  }, [entity])
-
-  React.useEffect(() => {
-    fetchData()
-  }, [fetchData])
-
-  return { data, isLoading, total }
+  return { searchTerm, handleSearchChange }
 }
 
 export default useSearch
