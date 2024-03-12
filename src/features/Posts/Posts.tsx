@@ -29,7 +29,7 @@ export const Posts: React.FC = () => {
         />
       </Filters>
       <Content>
-        <Counter count={filteredPosts.length} />
+        <Counter count={filteredPosts?.length} />
         <Results<PostType>
           data={filteredPosts}
           isLoading={isLoading}
