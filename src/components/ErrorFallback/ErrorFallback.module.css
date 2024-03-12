@@ -9,11 +9,13 @@
 
   &.errorTitle {
     color: var(--text-lighter-color);
+    font-weight: bold;
   }
 
   &.errorMessage {
     color: var(--text-darker-color);
-    font-weight: bold;
+    width: 100%;
+    max-width: 400px;
   }
 
   &.refreshButton {

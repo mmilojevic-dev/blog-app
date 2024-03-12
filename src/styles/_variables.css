@@ -52,6 +52,7 @@
   --space-10xl: 6.5rem;
 
   --border-radius-base: var(--font-size-xs);
+  --border-style-base: 1px solid;
 
   --transition-base: 0.3s ease-in-out;
 

@@ -1,9 +1,9 @@
 .filters {
   flex: 1 1 auto;
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: var(--border-style-base) var(--border-color);
   padding: var(--space-md) var(--space-md);
   @media (min-width: 768px) {
-    border-right: 1px solid var(--border-color);
+    border-right: var(--border-style-base) var(--border-color);
     width: 100%;
     max-width: 260px;
   }

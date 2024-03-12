@@ -1,4 +1,7 @@
 .post {
+  border-radius: var(--border-radius-base);
+  border-top: var(--border-style-base) var(--border-color);
+  border-bottom: var(--border-style-base) var(--border-color);
   & .title {
     text-decoration: underline;
     text-transform: capitalize;
@@ -8,6 +11,10 @@
     width: 100%;
     max-width: 600px;
     text-transform: capitalize;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    display: -webkit-box;
   }
 
   & .comments,

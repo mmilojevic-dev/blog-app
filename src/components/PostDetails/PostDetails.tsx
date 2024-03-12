@@ -11,23 +11,25 @@ type PostDetailsProps = {
 }
 export const PostDetails: React.FC<PostDetailsProps> = ({ post }) => {
   return (
-    <Card>
-      <CardHeader>
-        <h3 className={styles.title}>{post?.title}</h3>
-        <div className={styles.user}>
-          <FaUser />
-          {post?.userName}
-        </div>
-      </CardHeader>
-      <CardBody>
-        <div className={styles.text}>{post?.body}</div>
-      </CardBody>
-      <CardFooter>
-        <div className={styles.comments}>
-          <FaComments />
-          {post?.commentsNumber}
-        </div>
-      </CardFooter>
-    </Card>
+    <div className={styles.postDetails}>
+      <Card>
+        <CardHeader>
+          <h3 className={styles.title}>{post?.title}</h3>
+          <div className={styles.user}>
+            <FaUser />
+            {post?.userName}
+          </div>
+        </CardHeader>
+        <CardBody>
+          <div className={styles.text}>{post?.body}</div>
+        </CardBody>
+        <CardFooter>
+          <div className={styles.comments}>
+            <FaComments />
+            {post?.commentsNumber}
+          </div>
+        </CardFooter>
+      </Card>
+    </div>
   )
 }

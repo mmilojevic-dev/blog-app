@@ -1,2 +1,21 @@
 .postDetails {
+  border-radius: var(--border-radius-base);
+  & .title {
+    text-decoration: underline;
+    text-transform: capitalize;
+  }
+
+  & .text {
+    width: 100%;
+    max-width: 600px;
+    text-transform: capitalize;
+  }
+
+  & .comments,
+  & .user {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    white-space: nowrap;
+  }
 }
