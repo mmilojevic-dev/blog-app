@@ -1,7 +1,10 @@
 .filters {
-  flex: 1 0 auto;
-
+  flex: 1 1 auto;
+  border-bottom: 1px solid var(--border-color);
+  padding: var(--space-md) var(--space-md);
   @media (min-width: 768px) {
-    max-width: var(--space-10xl);
+    border-right: 1px solid var(--border-color);
+    width: 100%;
+    max-width: 260px;
   }
 }

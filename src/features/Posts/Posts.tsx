@@ -1,12 +1,21 @@
 import React from 'react'
 
-import { Content, Counter, Filters, Input, Layout, Results } from '@/components'
+import {
+  Content,
+  Counter,
+  Filters,
+  Input,
+  Layout,
+  Post,
+  Results
+} from '@/components'
 import { usePosts } from '@/hooks/usePosts'
 import { useSearch } from '@/hooks/useSearch'
+import { PostType } from '@/models'
 
 export const Posts: React.FC = () => {
   const { searchTerm, handleSearchChange } = useSearch()
-  const { filteredPosts } = usePosts(searchTerm)
+  const { filteredPosts, isLoading } = usePosts(searchTerm)
 
   React.useEffect(() => {
     console.log(filteredPosts)
@@ -20,8 +29,14 @@ export const Posts: React.FC = () => {
         />
       </Filters>
       <Content>
-        <Counter />
-        <Results />
+        <Counter count={filteredPosts.length} />
+        <Results<PostType>
+          data={filteredPosts}
+          isLoading={isLoading}
+          renderItem={({ item, isLoading }) => (
+            <Post isLoading={isLoading} post={item} key={item?.id} />
+          )}
+        />
       </Content>
     </Layout>
   )

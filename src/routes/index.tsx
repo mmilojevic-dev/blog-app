@@ -1,8 +1,8 @@
 import { Navigate, Route, Routes } from 'react-router-dom'
 
 import { ROUTES } from '@/config'
-import { PostId } from '@/views/PostId'
-import { Posts } from '@/views/Posts'
+import { PostId } from '@/features'
+import { Posts } from '@/features'
 
 export const AppRoutes: React.FC = () => {
   return (

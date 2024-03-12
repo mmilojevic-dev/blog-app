@@ -1,2 +1,33 @@
 .post {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--border-radius-base);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  &:hover {
+    backdrop-filter: brightness(1.2);
+  }
+
+  & .title {
+    text-decoration: underline;
+    text-transform: capitalize;
+  }
+
+  & .body {
+    width: 100%;
+    max-width: 600px;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    display: -webkit-box;
+    text-transform: capitalize;
+  }
+
+  & .userName {
+    color: var(--text-lighter-color);
+    text-align: right;
+  }
 }

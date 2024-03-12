@@ -7,7 +7,7 @@ import { useEntities } from './useEntities'
 
 export const usePosts = (searchTerm: string) => {
   const { entities: users } = useEntities<UserType>('users')
-  const { entities: posts } = useEntities<PostType>('posts')
+  const { entities: posts, isLoading } = useEntities<PostType>('posts')
   const debouncedSearchTerm = useDebounce<string>(searchTerm, 500)
 
   const filteredPosts = React.useMemo(() => {
@@ -22,5 +22,5 @@ export const usePosts = (searchTerm: string) => {
       )
   }, [posts, users, debouncedSearchTerm])
 
-  return { filteredPosts }
+  return { filteredPosts, isLoading }
 }

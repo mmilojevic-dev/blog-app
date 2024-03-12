@@ -51,7 +51,7 @@
   --space-9xl: 6rem;
   --space-10xl: 6.5rem;
 
-  --border-radius-base: 0.25rem;
+  --border-radius-base: var(--font-size-xs);
 
   --transition-base: 0.3s ease-in-out;
 
