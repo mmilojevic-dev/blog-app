@@ -26,8 +26,15 @@
     text-transform: capitalize;
   }
 
-  & .userName {
-    color: var(--text-lighter-color);
-    text-align: right;
+  & .additionalInfo {
+    display: flex;
+    justify-content: space-between;
+
+    & .comments,
+    & .user {
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+    }
   }
 }
