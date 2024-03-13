@@ -15,7 +15,7 @@
 ## Getting Started
 
 ### Environment variables
-- Rename `.env.example` file to `.env` and fill the required values (heads-up, in production - following values should not be contained by a public repository)
+- Copy `.env.example` and rename the copy to `.env` and fill the required values (heads-up, in production - following values should not be contained by a public repository)
 - Set the `REACT_APP_CLIENT_URL` to your local development host and port (Vite default is `http://localhost:5173`)
 - Set the `REACT_APP_API_URL` to JSONPlaceholder url (which is `https://jsonplaceholder.typicode.com`)
 - Pay attention that on both values there SHOULD NOT be a trailing forward slash `/`
@@ -34,6 +34,8 @@ OR
 npm install
 npm run dev
 ```
+
+- For production build use: `yarn build` or `npm run build`
 
 ### Key Directories and Files
 - `/api`: Contains functions to fetch data from the API.
