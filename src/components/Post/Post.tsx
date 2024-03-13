@@ -2,6 +2,7 @@ import { FaUser } from 'react-icons/fa'
 import { FaComments } from 'react-icons/fa'
 
 import { Card, CardBody, CardFooter, CardHeader } from '@/components'
+import { ROUTES } from '@/config'
 import { PostType } from '@/models'
 
 import styles from './Post.module.css'
@@ -11,7 +12,7 @@ type PostProps = {
 }
 export const Post: React.FC<PostProps> = ({ post }) => {
   return (
-    <a className={styles.post} href={`/post/${post?.id}`}>
+    <a className={styles.post} href={`/${ROUTES.POST.PATH}/${post?.id}`}>
       <Card>
         <CardHeader>
           <h3 className={styles.title}>{post?.title}</h3>

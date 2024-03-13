@@ -2,7 +2,7 @@ import * as React from 'react'
 import { ErrorBoundary } from 'react-error-boundary'
 import { BrowserRouter } from 'react-router-dom'
 
-import { ErrorFallback } from '@/components'
+import { ErrorFallback } from '@/components/ErrorFallback'
 
 type AppProviderProps = {
   children: React.ReactNode

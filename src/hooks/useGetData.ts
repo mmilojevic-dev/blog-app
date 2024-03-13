@@ -1,14 +1,14 @@
 import React from 'react'
 
-import { getData } from '@/api/getData'
+import { getData } from '@/api'
 import { getErrorMessage } from '@/utils'
 
-interface UseData<T> {
+interface UseGetData<T> {
   data: T
   isLoading: boolean
 }
 
-export const useData = <T>(url: string): UseData<T> => {
+export const useGetData = <T>(url: string): UseGetData<T> => {
   const [data, setData] = React.useState<T>()
   const [isLoading, setIsLoading] = React.useState<boolean>(false)
 

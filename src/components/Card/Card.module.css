@@ -3,18 +3,18 @@
   flex-direction: column;
   gap: var(--space-lg);
   padding: var(--space-sm) var(--space-md);
-}
 
-.header,
-.body,
-.footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: var(--space-sm);
-  padding: var(--space-sm) 0;
+  & .header,
+  & .body,
+  & .footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: var(--space-sm);
+    padding: var(--space-sm) 0;
 
-  @media (min-width: 768px) {
-    flex-direction: row;
+    @media (min-width: 768px) {
+      flex-direction: row;
+    }
   }
 }

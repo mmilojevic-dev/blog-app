@@ -2,7 +2,6 @@
   border-radius: var(--border-radius-base);
   border-top: var(--border-style-base) var(--border-color);
   border-bottom: var(--border-style-base) var(--border-color);
-  /* backdrop-filter: brightness(1.2); */
 
   & .email {
     display: flex;

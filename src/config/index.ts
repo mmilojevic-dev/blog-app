@@ -1,27 +1,41 @@
 export const APP_DEFAULT = {
   TITLE: 'Blog App',
-  API_URL: process.env.REACT_APP_API_URL as string
+  CLIENT_URL: process.env.REACT_APP_CLIENT_URL as string,
+  API_URL: process.env.REACT_APP_API_URL as string,
+  LOG_MESSAGE_PREFIX: 'Hello from',
+  LOG_MESSAGE_SUFIX: 'Component.',
+  SEARCH_FILTER_PLACEHOLDER: 'Search posts by user name'
 }
 
-export const ROUTES = {
-  HOME: {
-    LABEL: '',
-    PATH: '/'
+export const API = {
+  USERS: {
+    PATH: 'users'
   },
   POSTS: {
-    LABEL: 'Posts',
-    PATH: '/posts'
+    PATH: 'posts'
   },
-  POST_ID: {
-    LABEL: '',
-    PATH: '/post'
+  COMMENTS: {
+    PATH: 'comments'
   }
 }
 
-export const POSTS = {
-  TITLE: `List Of Posts:`
+export const ROUTES = {
+  POSTS: {
+    PATH: 'posts'
+  },
+  POST: {
+    PATH: 'post',
+    PARAM_NAME: 'postId'
+  },
+  NOT_FOUND: {
+    PATH: '404'
+  },
+  INTERNAL_SERVER: {
+    PATH: '500'
+  }
 }
 
-export const POST_ID = {
-  TITLE: `Post Details:`
+export const ERRORS = {
+  NOT_FOUND_MESSAGE: '404 - Not Found.',
+  INTERNAL_SERVER_MESSAGE: '500 - Internal Server Error.'
 }

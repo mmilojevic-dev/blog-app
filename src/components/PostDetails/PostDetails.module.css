@@ -1,5 +1,4 @@
 .postDetails {
-  border-radius: var(--border-radius-base);
   & .title {
     text-decoration: underline;
     text-transform: capitalize;

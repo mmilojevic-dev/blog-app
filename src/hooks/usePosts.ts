@@ -11,7 +11,7 @@ export const usePosts = (
   posts: PostType[],
   comments: CommentType[]
 ) => {
-  const debouncedSearchTerm = useDebounce<string>(searchTerm, 500)
+  const debouncedSearchTerm = useDebounce<string>(searchTerm)
 
   const filterPostsByUserName = useCallback(
     (posts: PostType[]) =>

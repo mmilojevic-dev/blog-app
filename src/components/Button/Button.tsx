@@ -3,7 +3,7 @@ import styles from './Button.module.css'
 type ButtonProps = {
   children: React.ReactNode
   onClick?: () => void
-  variant?: 'primary' | 'danger'
+  variant?: 'primary'
   size?: 'sm' | 'md' | 'lg'
 } & React.ButtonHTMLAttributes<HTMLButtonElement>
 
