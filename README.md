@@ -1,6 +1,6 @@
 # Blog App
 
-- Blog App is a dynamic web application that allows users to explore blog posts, comments, and interact with the content. Utilizing React for the frontend, the app is designed to offer a seamless and engaging user experience. The project leverages React Router for navigation, Axios for API requests, and implements error handling and loading states for a robust user experience.
+- Blog App is a dynamic web application that allows users to explore blog posts, comments, and interact with the content. Utilizing React for the frontend.
 
 ### Features
 - Dynamic Posts and Comments: Users can view a list of posts and their associated comments fetched from an external API, and single post on a separate route as well.
