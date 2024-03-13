@@ -1,0 +1,11 @@
+.filters {
+  flex: 1 1 auto;
+  border-bottom: var(--border-style-base) var(--border-color);
+  padding: var(--space-md) var(--space-md);
+
+  @media (min-width: 768px) {
+    border-right: var(--border-style-base) var(--border-color);
+    width: 100%;
+    max-width: 260px;
+  }
+}

@@ -15,16 +15,6 @@
     color: var(--white-color);
   }
 
-  &.inverse {
-    background-color: var(--white-color);
-    color: var(--secondary-color);
-  }
-
-  &.danger {
-    background-color: var(--danger-color);
-    color: var(--white-color);
-  }
-
   &.sm {
     padding: var(--space-xs) var(--space-sm);
     font-size: var(--font-size-sm);

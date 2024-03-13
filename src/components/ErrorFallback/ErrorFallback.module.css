@@ -7,16 +7,14 @@
   justify-content: center;
   align-items: center;
 
-  &.errorTitle {
+  &.title {
     color: var(--text-lighter-color);
-  }
-
-  &.errorMessage {
-    color: var(--text-darker-color);
     font-weight: bold;
   }
 
-  &.refreshButton {
-    margin-top: var(--space-md);
+  &.message {
+    color: var(--text-darker-color);
+    width: 100%;
+    max-width: 400px;
   }
 }

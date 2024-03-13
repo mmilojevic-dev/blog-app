@@ -1,6 +1,5 @@
 :root {
-  --primary-color: #ff4500;
-  --secondary-color: #0079d3;
+  --primary-color: #0079d3;
   --black-color: #000000;
   --gray-900-color: #1b2426;
   --gray-800-color: #353e40;
@@ -19,7 +18,7 @@
 
   --border-color: var(--gray-700-color);
   --input-background-color: var(--gray-800-color);
-  --input-focus-border-color: var(--secondary-color);
+  --input-focus-border-color: var(--primary-color);
   --input-text-color: var(--gray-300-color);
   --input-placeholder-color: var(--gray-700-color);
 
@@ -51,7 +50,8 @@
   --space-9xl: 6rem;
   --space-10xl: 6.5rem;
 
-  --border-radius-base: 0.25rem;
+  --border-radius-base: var(--font-size-xs);
+  --border-style-base: 1px solid;
 
   --transition-base: 0.3s ease-in-out;
 

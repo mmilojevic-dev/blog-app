@@ -28,6 +28,7 @@ export type PostType = {
   title: string
   body: string
   userName?: string
+  commentsNumber?: number
 }
 
 export type CommentType = {

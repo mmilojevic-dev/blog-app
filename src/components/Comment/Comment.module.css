@@ -1,0 +1,15 @@
+.comment {
+  border-radius: var(--border-radius-base);
+  border-top: var(--border-style-base) var(--border-color);
+  border-bottom: var(--border-style-base) var(--border-color);
+
+  & .email {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+
+    span {
+      margin-bottom: 0.2rem;
+    }
+  }
+}
